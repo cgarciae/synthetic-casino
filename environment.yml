@@ -1,0 +1,11 @@
+name: synthetic-casino
+
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - opencv
+  - pip:
+    - py
+    - git+https://github.com/cgarciae/domain-randomization
+    - git+https://github.com/cgarciae/pascal-voc-writer
