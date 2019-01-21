@@ -1,7 +1,9 @@
+# job
+WORKERS=6
+N_SAMPLES=100000
 
 # data
 DATE=$(date "+%Y%m%d_%H%M%S")
-N_SAMPLES=100000
 SIZE=$(py "\
     $N_SAMPLES if $N_SAMPLES < 1000 \
     else str($N_SAMPLES // 1000) + 'K' if $N_SAMPLES < 1000000 \
@@ -24,8 +26,7 @@ BACKGROUND_ROTATE=True
 OBJECT_SCALE=1.3
 OUTPUT_EXTENSION="jpg"
 
-# job
-WORKERS=6
+
 
 # args
 for var in "$@"; do
